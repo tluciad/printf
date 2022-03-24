@@ -1,28 +1,25 @@
 #include "main.h"
+
 /**
- *get_op_func - function that selects the type of char
+ *get_func - function that selects the type of char
  *@format: string
  *Return: pointer to the string or NULL
  */
-int (*get_op_func(const char *format))(va_list)
+int (*get_func(const char *format))(va_list)
 {
-	tp_t type[]{
-		{"c", p_char},
-		{"s", p_str},
-		{"%", p_pc},
-		{"d", p_dec},
-		{"i", p_int},
-		{NULL, NULL}};
+	specifier tp[] = {
+		{"c", pnchar},
+		{"s", pnstr},
+		{"%", pnprc},
+		{NULL, NULL}
+	};
+	int cn = 0;
 
-	int i = 0;
-
-	while (type[i].tp != NULL)
+	for (; tp[cn].t; cn++)
 	{
-		if (type[i].tp[0] == *format)
-		{
-			return (type[i].f);
-		}
-		i++;
+		if (*format == *(tp[cn].t))
+			return (tp[cn].f);
 	}
+
 	return (NULL);
 }
