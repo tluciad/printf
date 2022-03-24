@@ -3,7 +3,7 @@
 /**
  * _printf - function that print accord the format
  *@format: string to print
- *
+ *Return: i
  */
 int _printf(const char *format, ...)
 {
@@ -21,8 +21,8 @@ int _printf(const char *format, ...)
 		if (format[j] == '%')
 		{
 			j++;
-			if (format[j] != '%' && format[j] != 'd' 
-			&& format[j] != 'i' && format[j] != 'c' 
+			if (format[j] != '%' && format[j] != 'd'
+			&& format[j] != 'i' && format[j] != 'c'
 			&& format[j] != 's')
 			{
 				if (format[j - 1] == '%' && format[j] == '\0')

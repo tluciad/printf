@@ -14,6 +14,7 @@ int _putchar(char c)
 /**
  *pnchar - function that prints a character
  *@arg: the character argument
+ *Return: 0
  */
 int pnchar(va_list arg)
 {
@@ -24,6 +25,7 @@ int pnchar(va_list arg)
 /**
  * pnstr - function that print a string
  * @arg: the string argument
+ * Return: 0
  */
 int pnstr(va_list arg)
 {
@@ -42,7 +44,7 @@ int pnstr(va_list arg)
 /**
  * pnprc - function that print a percentage symbol
  * @arg: percentage symbol
- * Return: 
+ * Return: 0
  */
 int pnprc(va_list arg)
 {
