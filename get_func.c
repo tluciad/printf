@@ -8,10 +8,12 @@
 int (*get_func(const char *format))(va_list)
 {
 	specifier tp[] = {
-		{"c", pnchar},
-		{"s", pnstr},
-		{"%", pnprc},
-		{NULL, NULL}
+		{"c", _printch},
+		{"s", _printstr},
+		{"%", _printpercent},
+		{"i", _print_int},
+		{"d", _printdec},
+		{NULL, NULL},
 	};
 	int cn = 0;
 

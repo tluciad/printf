@@ -19,9 +19,11 @@ typedef struct print
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int pnchar(va_list arg);
-int pnstr(va_list arg);
-int pnprc(va_list arg);
+int _printch(va_list arg);
+int _printstr(va_list arg);
+int _printpercent(va_list arg);
+int _print_int(va_list arg);
+int _printdec(va_list arg);
 int (*get_func(const char *format))(va_list);
 
 #endif
