@@ -1,21 +1,33 @@
 #include "main.h"
+
 /**
- *p_char - function that prints a character
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
+/**
+ *pnchar - function that prints a character
  *@arg: the character argument
  */
-int p_char(va_list arg)
+int pnchar(va_list arg)
 {
 	_putchar(va_arg(arg, int));
 	return (1);
 }
 
 /**
- * p_str - function that print a string
+ * pnstr - function that print a string
  * @arg: the string argument
  */
-int p_str(va_list arg)
+int pnstr(va_list arg)
 {
-	char *st = va_arg(arg, char*);
+	char *st = va_arg(arg, char *);
 	int len = 0;
 
 	if (!st)
@@ -28,11 +40,12 @@ int p_str(va_list arg)
 	return (len);
 }
 /**
- * p_prc - function that print a percentage symbol
+ * pnprc - function that print a percentage symbol
  * @arg: percentage symbol
+ * Return: 
  */
-int p_prc(va_list arg)
+int pnprc(va_list arg)
 {
-	void(arg);
-	return ('\%')
+	(void)arg;
+	return (_putchar('%'));
 }
