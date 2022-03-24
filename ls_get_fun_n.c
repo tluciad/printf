@@ -8,7 +8,9 @@
 int _print_int(va_list arg)
 {
 	int size = 0;
+
 	size = _printdec(arg);
+
 	return (size);
 }
 
@@ -16,7 +18,7 @@ int _print_int(va_list arg)
 /**
  * _printdec - function that print decimal
  *@arg: decimal argument
- *
+ *Return: 0
  */
 int _printdec(va_list arg)
 {
