@@ -38,8 +38,7 @@ int _printstr(va_list arg)
 	{
 		_putchar(st[len]);
 		len++;
-	}	
-
+	}
 	return (len);
 }
 /**
