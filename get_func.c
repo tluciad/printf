@@ -13,6 +13,7 @@ int (*get_func(const char *format))(va_list)
 		{"%", _printpercent},
 		{"i", _print_int},
 		{"d", _printdec},
+		{"b", print_bin},
 		{NULL, NULL},
 	};
 	int cn = 0;
