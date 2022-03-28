@@ -19,5 +19,5 @@ int print_bin(va_list arg)
 		_putchar(str[i]);
 		i++;
 	}
-	return (i);
+	return (i);.
 }
