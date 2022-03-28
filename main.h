@@ -29,5 +29,9 @@ int _printdec(va_list arg);
 int (*get_func(const char *format))(va_list);
 int print_bin(va_list arg);
 char *converter(unsigned long int num, int base, bool upp);
+int print_undec(va_list arg);
+int print_oct(va_list arg);
+int print_hex(va_list arg);
+int print_HEX(va_list arg);
 
 #endif

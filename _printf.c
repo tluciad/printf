@@ -22,7 +22,9 @@ int _printf(const char *format, ...)
 			j++;
 			if (format[j] != '%' && format[j] != 'd'
 			&& format[j] != 'i' && format[j] != 'c'
-			&& format[j] != 's' && format [j] != 'b')
+			&& format[j] != 's' && format[j] != 'b'
+			&& format[j] != 'u' && format[j] != 'o'
+			&& format[j] != 'x' && format[j] != 'X')
 			{
 				if (format[j - 1] == '%' && format[j] == '\0')
 					return (-1);
